@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp</title>
+   <!--<link rel="stylesheet" type="text/css" href="/public/style.css">--> 
+   <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="form-box">
+        <center>
+            <h1>SIGNUP</h1> 
+
+            <form id="signupForm" class="input-group" action="/signup" onsubmit="return validateForm()" method="post">
+                <div class="inp">
+                    <input type="text" id="firstname" name="FirstName" class="input-field" placeholder="First Name" style="width: 80%; border:none;" required="required">
+                </div>
+                <div class="inp">
+                   
+                    <input type="text" id="lastname" name="LastName" class="input-field" placeholder="Last Name" style="width: 80%; border:none;" required="required">
+                </div>
+                <div class="inp">
+                    
+                    <input type="email" id="email" name="EmailID" class="input-field" placeholder="Email" style="width: 80%; border:none;" pattern="[a-zA-z0-9._%+-]+@[a-zA-Z0-9._%+-]+\.[a-zA-Z]{2,}">
+                </div>
+                <div class="inp">
+                    
+                    <input type="password" id="password" name="Password" class="input-field" placeholder="Password" style="width: 80%; border: none;" required="required">
+                </div>
+                <div class="inp">
+                    
+                    <input type="password" id="confirmPassword" name="ConfirmPassword" class="input-field" placeholder="Confirm Password" style="width: 80%; border: none;" required="required">
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="submit-btn">Submit</button>
+                <br>
+               
+				<center>
+					<p>user already existed<a href="/login">Login</a></p>
+
+				</center>
+            </form>
+        </center>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+
+			if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+         
+            return true;
+        }
+    </script>
+</body>
+</html>
+

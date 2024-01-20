@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+		<div class="form-box">
+			<center>
+                <h1>LOGIN</h1>
+            </center>
+			<!-- Login Form -->
+			<form id="login" class="input-group" action= "/login" method="post" >
+				<div class="inp">
+					<img src="user.png"><input type="email" name="emailId" id="email" class="input-field" placeholder="Email" style="width: 80%; border:none;"pattern="[a-zA-z0-9._%+-]+@[a-zA-Z0-9._%+-]+.\[a-zA-Z]{3,}">
+				</div>
+				<div class="inp">
+					<img src="password.png"><input type="password" name="Password" id="password" class="input-field" placeholder="Password" style="width: 80%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+                <br>
+                <br>
+
+				<button type="submit" class="submit-btn">Log In</button>
+                <br>
+
+                <center><p>Dont Have an Account? <a href="/signup">SignUp</a> </p></center>
+
+			</form>
+		</center>
+       
+		</div>
+</body>
+</html>
